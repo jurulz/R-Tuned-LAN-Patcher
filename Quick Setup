@@ -1,0 +1,42 @@
+## Quick Setup / TL;DR
+
+### Requirements
+
+- R-Tuned running through **TeknoParrot**
+- **AutoHotkey v2**
+- All cabinets connected to the same LAN/Wi-Fi
+- Each cabinet should have its own Windows IPv4 address
+- Keep a backup of the original `dsr_HD`
+
+### Setup
+
+1. Run `RTuned_LAN_Patcher_v2.2b_V21_Extended.ahk`.
+2. Select your original `dsr_HD`.
+3. Select **2, 3, or 4 cabinets**.
+4. Enter the real Windows LAN/Wi-Fi IP for each cabinet.
+5. Run the patch and use the generated patched `dsr_HD`.
+6. Start R-Tuned and enter **Service Mode** on each cabinet.
+7. Set **TOTAL MACHINE** to the same number of cabinets selected in the AHK patcher.
+8. Set each machine's **Cabinet / LINK ID** to match its assignment in the AHK patcher.
+
+Example:
+
+```text
+AHK Patcher                R-Tuned Service Mode
+------------------------------------------------
+CAB1 = 192.168.2.176   ->  LINK ID 1
+CAB2 = 192.168.2.212   ->  LINK ID 2
+CAB3 = 192.168.2.150   ->  LINK ID 3
+CAB4 = 192.168.2.151   ->  LINK ID 4
+```
+
+For a 2-cabinet setup:
+
+```text
+TOTAL MACHINE = 2
+
+PC 192.168.2.176 -> LINK ID 1
+PC 192.168.2.212 -> LINK ID 2
+```
+
+**The Cabinet/LINK ID must correspond to the CAB number configured in the AHK patcher.**
